@@ -7,9 +7,13 @@ python3 manage.py shell
 from recipes.models import FoodRecipe
 
 # Create instances of FoodRecipe and save them to the database
+
 recipe1 = FoodRecipe.objects.create(title="Vegetable Stir Fry", recipe_type="VEG")
+
 recipe2 = FoodRecipe.objects.create(title="Chicken Curry", recipe_type="NON-VEG")
+
 recipe3 = FoodRecipe.objects.create(title="Pasta Primavera", recipe_type="VEG")
+
 recipe4 = FoodRecipe.objects.create(title="Chicken momo", recipe_type="NON-VEG")
 
 exit()
@@ -18,4 +22,5 @@ exit()
 print(FoodRecipe.objects.all())
 
 python3 manage.py makemigrations
+
 python3 manage.py migrate
