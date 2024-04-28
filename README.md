@@ -1,6 +1,6 @@
 Add recipes in database
 
-#Run in project directory
+# Run in project directory
 python3 manage.py shell
 
 # Import the FoodRecipe model
@@ -21,6 +21,7 @@ exit()
 # Verify that the recipes have been added to the database
 print(FoodRecipe.objects.all())
 
+# migrate
 python3 manage.py makemigrations
 
 python3 manage.py migrate
