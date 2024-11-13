@@ -18,3 +18,14 @@ jobs:
     - name: Run Tests
       run: |
         ls
+  secondstage:
+    runs-on: ubuntu-latest
+    environment: QA
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install Dependencies
+      run: |
+        pwd
+    - name: Run Tests
+      run: |
+        ls
