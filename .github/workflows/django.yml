@@ -18,12 +18,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: QA
     steps:
     - uses: actions/checkout@v4
-    - name: Install Dependencies
+    - name: Environment specific
       run: |
-        pwd
+        run: echo "Environment : ${{ github.event.inputs.option }}"
         
   devStage:
     runs-on: ubuntu-latest
