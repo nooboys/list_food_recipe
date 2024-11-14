@@ -22,7 +22,7 @@ jobs:
   devStage:
     runs-on: ubuntu-latest
     needs: build
-    if: ${{ github.event.inputs.option == 'dev' }}
+    if: ${{ inputs.environment == 'dev' }}
     environment: dev
     steps:
       - uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
   QAstage:
     runs-on: ubuntu-latest
     needs: build
-    if: ${{ github.event.inputs.option == 'QA' }}
+    if: ${{ inputs.environment == 'QA' }}
     environment: QA
     steps:
       - uses: actions/checkout@v4
