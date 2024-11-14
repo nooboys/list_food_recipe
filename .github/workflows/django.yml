@@ -3,7 +3,7 @@ name: Environment Test
 on:
   workflow_dispatch:
     inputs:
-      option:
+      environment:
         description: "Choose an Environment to run the action"
         required: true
         type: choice
@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Print Selected Environment
-        run: echo "Environment: ${{ github.event.inputs.options }}"
+        run: echo "Environment ${{ inputs.environment }}"
 
   devStage:
     runs-on: ubuntu-latest
